@@ -11,8 +11,8 @@ output:
     css: my_style.css
     theme: simple
     transition: default
-    self_contained: false
-    reveal_plugins: ["notes"]
+    self_contained: true
+    #reveal_plugins: ["notes"]
     reveal_options:
       controls: false
       chalkboard: 
