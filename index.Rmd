@@ -1,0 +1,391 @@
+---
+title: Methoden der Datenanalyse I
+       <br>
+subtitle: <h2>Landeslehrpreis 2020</h2>
+          <h1>Fabian Class</h1>
+author: <br><br>
+        Universität Potsdam<br>
+        Lehrstuhl für Methoden der <br>empirischen Sozialforschung
+output: 
+  revealjs::revealjs_presentation:
+    css: my_style.css
+    theme: simple
+    transition: default
+    self_contained: false
+    reveal_plugins: ["notes"]
+    reveal_options:
+      controls: false
+      chalkboard: 
+        theme: sky
+        toggleNotesButton: true
+      menu:
+        numbers: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+##
+<i>Süddeutsche Zeitung (11. Oktober)</i><br><br>
+"Seit Beginn der Corona-Pandemie hat die <br><u>große Stunde der Statistiker</u> geschlagen. <br><br>
+Selten hat die Welt so ausdauernd interessiert und zugleich nervös auf Zahlen, Balken und Kurvendiagramme geschaut."
+
+<aside class="notes">
+  Als ich vor ca. 10 Monaten das letzte Mal meine Vorlesung gehalten habe, 
+  hätte ich nicht damit gerechnet, dass Statistik, mal so intensiv in den 
+  Medien diskutiert wird wie im Zuge der Covid-19-Pandemie. <br>
+  <br>
+Selten haben wir so interessiert und nervös auf Zahlen, 
+Balken und Kurvendiagramme geschaut.  
+  
+</aside>
+
+## 
+
+<i>Frankfurter Allgemeine Zeitung (7. Mai)</i><br><br>
+"Die Statistikschwächen der Heinsberg-Studie"
+
+<aside class="notes">
+Die heftige Kritik an der Heinsberg-Studie sowie an der Studie von
+Prof. Drosten <br><br>
+
+zeigt aber auch, dass Statistik selbst für erfahrene
+Wissenschaftlerinnen und Wissenschaftler nicht einfach ist.
+</aside>
+
+
+
+##
+
+<i>Zeit Online (3. Juni)</i><br><br>
+"Neuauflage der Drosten-Studie" <br> "Die erste Version hatten Statistiker fachlich kritisiert [...]" 
+
+<aside class="notes">
+Die heftige Kritik an der Heinsberg-Studie sowie an der Studie von
+Prof. Drosten <br><br>
+
+zeigt aber auch, dass Statistik selbst für erfahrene
+Wissenschaftlerinnen und Wissenschaftler nicht einfach ist.
+</aside>
+
+
+##  
+<section data-background-image="studierenden_foto_blur_4.png" data-background-opacity = "0.2">
+<h1  class = "title" style="background-color: rgba(255,255,255,0.8)">Methoden der Datenanalyse I</h1>
+
+<ul>
+<li>Grundlagenvorlesung Statistik</li>
+<li>240 Bachelor-Studierende</li>
+<li>9 unterschiedliche Studiengänge</li>
+<li>1.–8. Fachsemester</li>
+<li>Zwei Mal wöchentlich (4 SWS)</li>
+</ul>
+
+
+<aside class="notes">
+Das gilt natürlich auch für Studierende, gerade wenn sie zum
+ersten mal mit Statistik in Kontakt kommen. <br>
+<br> <br>
+Deshalb habe ich mir überlegt, wie kann ich den Studierenden in meiner Vorlesung den
+Zugang zur Statistik erleichtern und Sie für diesen Themenbereich
+begeistern.
+
+
+Ein paar Eckdaten zu meiner Vorlesung.
+
+Methoden der Datenanalyse I ist eine Grundlagenvorlesung in Statistik.
+
+Im letzten Wintersemester mit ca. 240 Bachelorstudierenden aus 9
+unterschiedlichen Studiengängen.
+
+Darunter z. B. Soziologie, Politikwissenschaft, BWL, Kulturwissenschaften und Germanistik
+
+Und auch bezüglich des Fachsemesters war alles vom 1. bis zum 8. Fachsemester vertreten.
+
+Also ein sehr diverses Publikum.
+
+Die Vorlesung findet zwei Mal wöchentlich statt.
+
+</aside>
+
+</section>
+
+
+
+## Lehrkonzept
+
+<ol>
+<li> Intuitives Verstehen durch Ausprobieren und Erfahren </li>
+<li> Aktive Teilnahme der Studierenden während der Vorlesung </li>
+<li> Erfolgserlebnisse schaffen durch Üben </li>
+</ol>
+<br>
+<div class="b">
+<br>
+<ul class="a">
+<li>Aufzeichnung der Vorlesung durch Media.UP</li>
+</ul>
+</div>
+
+
+<aside class="notes">
+Mein Lehrkonzept, um Studierende für Statistik zu begeistern, hat drei
+zentrale Elemente.
+
+
+1. Intuitives Verstehen durch Ausprobieren und Erfahren
+2. Aktive Teilnahme der Studierenden während der Vorlesung
+3. Erfolgserlebnisse schaffen durch Üben
+
+Außerdem wird die Vorlesung aufgezeichnet, sodass Studierende die
+Vorlesung beliebig oft anschauen können. 
+
+Zur Umsetzung dieser zentralen Elemente habe ich drei interaktive Web-Anwendungen sogenannte Apps programmiert.
+
+Die Apps können 
+
++ über das Internet 
++ von jedem Ort aus 
++ auf jedem Smartphone, Tablet oder PC genutzt werden ohne etwas installieren zu müssen.
+</aside>
+
+
+## 
+<section data-background-image="concept_screenshot.jpg"
+                  data-background-color="#ffffff">
+
+<aside class="notes">
+Das ist die Hauptseite der drei Apps.
+Das ist eine ganz normale Internetseite.
+
+Wir gehen gleich in die erste App.
+
+In der ersten App können die Studierenden direkt während der Vorlesung
+oder danach <br>  <br> 
+
+
+... NEXT
+durch Ausprobieren verschiedene statistische Konzepte
+erfahren und verstehen.
+
+
+
+</aside>
+
+</section>
+
+## 
+<section data-autoplay data-background-video="final_concept2.mp4" 
+              data-background-color="#ffffff"
+              data-background-size = "contain"
+              data-background-position = "top">
+
+<aside class="notes">
+durch Ausprobieren verschiedene statistische Konzepte erfahren und verstehen.
+
+Hier simulieren wir 200 Münzwürfe einer fairen Münze, und schätzen damit die Wahrscheinlichkeit, dass die Münze Kopf zeigt. 
+
+Fair bedeutet, die Wahrscheinlichkeit ist 0.5.
+
+Nach 21 Münzwürfen haben wir eine geschätzte Wahrscheinlichkeit von 0.29.
+Selbst nach ca. 100 Münzwürfen haben wir erst eine geschätzte Wahrscheinlichkeit von 0.4.
+
+Auf der linken Seite können die Studierenden die echte Wahrscheinlichkeit, dass die Münze Kopf zeigt,  
+anpassen, zum Beispiel 0.7 und die Münze wieder 200 Mal werfen.
+In beiden Fällen sehen wir, dass wenige Münzwürfe nicht ausreichen, um die Wahrscheinlichkeit genau zu schätzen.
+
+<br>
+Im nächsten Beispiel können Studierende das Ziehen von Stichproben ausprobieren.
+
+Jeder schwarze Punkt ist eine Person und alle roten Dreiecke sind Personen in der Stichprobe.
+
+Wir schauen: Wie wirkt sich die Stichprobengröße auf die Schätzung 
+z. B. des durchschnittlichen Einkommens aus.
+
+Was passiert, wenn nicht 100, sondern 400 oder 1000 Personen befragt werden?
+
+Wenn wir eine solche Schätzung durchführen, ist das immer mit Unsicherheit verbunden.
+Wie unsicher ist unsere Schätzung des durchschnittlichen Einkommens?
+
+Hier ist jeder Punkt das durchschnittliche Einkommen für eine einzelne Stichprobe. 
+Und die vertikalen Linien zeigen die Unsicherheit an.
+
+Wir können ausprobieren, wie wirkt sich die Stichprobengröße auf die Unsicherheit der Schätzung aus.
+
+
+
+</aside>
+</section>
+
+
+
+## 
+<section data-background-image="iphone_final.jpg"
+                  data-background-color="#ffffff"
+                  data-background-size = "contain">
+
+<aside class="notes">
+Über die zweite App bearbeiten die Studierenden während der Vorlesung
+Übungsaufgaben.
+
+So sieht die Hauptseite auf einem Handy aus.
+
+
+</aside>
+</section>
+
+## 
+<section data-background-video="iphone_final.mp4" 
+              data-background-color="#ffffff">
+<aside class="notes">
+
+Die Seite passt sich perfekt an das Display an.
+Wir scrollen runter zur zweiten App.
+Und gehen direkt in die App.
+
+
+In der App wählen die Studierenden zuerst den Themenbereich aus und 
+dann die jeweilige Übungsaufgabe.
+
+Zuerst sehen wir einen Begrüßungstext und dann folgt die eigentliche Übungsaufgabe.
+In dieser Aufgabe soll eine Wahrscheinlichkeit berechnet werden.
+Die Studierenden geben dann ihre Antwort ein.
+
+
+
+Die Antworten aller Studierenden werden dann sofort mit meinem Computer synchronisiert und 
+direkt im Anschluss werte ich die Antworten aus und <br> <br>
+
+... NEXT
+präsentiere die Ergebnisss zum Beispiel in Form einer solchen Grafik.
+
+</aside>
+</section>
+
+## 
+<section data-background-image="ex_1.png"
+                  data-background-color="#ffffff"
+                  data-background-size = "contain">
+                  
+<aside class="notes">
+präsentiere die Ergebnisss zum Beispiel in Form einer solchen Grafik.
+
+An dem roten Balken sehen wir, dass einige Studierende einen Wert angegeben haben,
+der kleiner als 0 ist. 
+Wahrscheinlichkeiten können aber gar nicht kleiner als 0 sein.
+
+
+Ich kann also für mich direkt in der Vorlesung  kontrollieren, ob die Studierenden die
+Lehrinhalte grundlegend verstanden haben und ich kann ggf. darauf reagieren.
+
+
+
+</aside>
+</section>
+
+## 
+<section data-background-image="statex_screenshot.jpg"
+                  data-background-color="#ffffff"
+                  data-background-size = "contain">
+
+<aside class="notes">
+NEXT
+
+
+</aside>
+</section>
+
+
+## 
+<section data-background-video="statex_final.mp4" 
+              data-background-color="#ffffff">
+
+<aside class="notes">
+In der dritten App können die Studierenden zusätzliche Übungsaufgaben 
+zur Klausurvorbereitung bearbeiten.
+
+Auch hier wählen wir zuerst den Themenbereich aus und dann eine der Aufgaben.
+
+
+Für die zufällige Auswahl von weißen und blauen Kugeln aus einer Urne soll 
+hier ein Baumdiagramm gezeichnet werden.
+
+Jedes Mal, wenn wir auf "Neue Daten" drücken, werden zufällig neue Zahlen für die Aufgabe generiert.
+
+Außerdem erhalten wir immer eine aktuelle Lösung. 
+Wenn wir neue Zahlen generieren, wird auch die dazugehörige Lösung aktualisiert.
+
+
+Schauen wir uns noch eine zweite Aufgabe an.    
+
+
+Auch hier können wir zufällig neue Zahlen generieren.
+Bei dieser Aufgabe ändern sich nicht nur die Zahlen, sondern auch der Aufgabentext.
+
+Und wir bekommen auch hier immer eine aktualisierte Lösung.
+
+Die Studierenden können alle Aufgaben beliebig oft mit neuen Zahlen bearbeiten.
+Sie können also solange üben, bis sie es wirklich verstanden.
+
+
+Und das ist dann ein riesiges Erfolgserlebnis und motiviert natürlich.
+</aside>
+</section>
+
+
+
+
+## Interesse an den Apps
+
++ Ideen der Studierenden
++ Interesse anderer Universitäten
+
+<aside class="notes">
+Was mich sehr gefreut hat, war, dass Studierende mit ihren eigenen Ideen 
+zur Weiterentwicklung und Verbesserung der Apps zu mir gekommen sind und ich habe das dann umgesetzt.
+
+Außerdem habe ich durch Rückmeldungen mitbekommen, 
+dass auch Studierende anderer Universitäten mittlerweile die Apps nutzen.
+
+Und gerade erst Anfang Oktober habe ich die erste Anfrage einer anderen Uni bekommen, 
+die solche Apps bei sich auch einsetzen möchten.
+</aside>
+
+
+## 
+<section data-background-image="lecture_01_pix.png"
+                  data-background-color="#ffffff"
+                  data-background-size = "contain">
+
+
+<aside class="notes">
+Und wer so hart arbeitet wie meine Studierenden, verdient natürlich auch eine Belohnung.
+
+Und deshalb behandeln wir Kombinatorik in der Vorlesung mit 300 Ritter Sport Mini für die Studierenden.
+Das ist ein Bild aus der Videoaufzeichnung der Vorlesung.
+</aside>
+</section>
+
+
+## 
+<section data-background-image="lecture_2_text.png"
+                  data-background-color="#ffffff"
+                  data-background-size = "contain">
+
+<aside class="notes">
+Und hier ist noch das Beweisfoto, dass es nicht nur 7 Ritter Sport Mini für 240 Studierende gab, sondern genug für alle.
+
+Wenn Sie jetzt Lust auf Statistik bekommen haben, 
+
+können Sie einfach auf www.datenanalyse.info gehen
+
+und selbst etwas über Statistik lernen.
+
+Vielen Dank!
+
+</aside>
+</section>
+
+
+

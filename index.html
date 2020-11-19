@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="   Universität Potsdam  Lehrstuhl für Methoden der  empirischen Sozialforschung" />
+  <title>Methoden der Datenanalyse I  </title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="my_style.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="index_files/header-attrs-2.5/header-attrs.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Methoden der Datenanalyse I <br></h1>
+  <h1 class="subtitle"><h2>
+Landeslehrpreis 2020
+</h2>
+<h1>
+Fabian Class
+</h1></h1>
+    <h2 class="author"><br><br> Universität Potsdam<br> Lehrstuhl für Methoden der <br>empirischen Sozialforschung</h2>
+</section>
+
+<section id="section" class="slide level2">
+<h2></h2>
+<p><i>Süddeutsche Zeitung (11. Oktober)</i><br><br> “Seit Beginn der Corona-Pandemie hat die <br><u>große Stunde der Statistiker</u> geschlagen. <br><br> Selten hat die Welt so ausdauernd interessiert und zugleich nervös auf Zahlen, Balken und Kurvendiagramme geschaut.”</p>
+<aside class="notes">
+<p>Als ich vor ca. 10 Monaten das letzte Mal meine Vorlesung gehalten habe, hätte ich nicht damit gerechnet, dass Statistik, mal so intensiv in den Medien diskutiert wird wie im Zuge der Covid-19-Pandemie. <br> <br> Selten haben wir so interessiert und nervös auf Zahlen, Balken und Kurvendiagramme geschaut.</p>
+</aside>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><i>Frankfurter Allgemeine Zeitung (7. Mai)</i><br><br> “Die Statistikschwächen der Heinsberg-Studie”</p>
+<aside class="notes">
+<p>Die heftige Kritik an der Heinsberg-Studie sowie an der Studie von Prof. Drosten <br><br></p>
+zeigt aber auch, dass Statistik selbst für erfahrene Wissenschaftlerinnen und Wissenschaftler nicht einfach ist.
+</aside>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p><i>Zeit Online (3. Juni)</i><br><br> “Neuauflage der Drosten-Studie” <br> “Die erste Version hatten Statistiker fachlich kritisiert […]”</p>
+<aside class="notes">
+<p>Die heftige Kritik an der Heinsberg-Studie sowie an der Studie von Prof. Drosten <br><br></p>
+zeigt aber auch, dass Statistik selbst für erfahrene Wissenschaftlerinnen und Wissenschaftler nicht einfach ist.
+</aside>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<section data-background-image="studierenden_foto_blur_4.png" data-background-opacity="0.2">
+<h1 class="title" style="background-color: rgba(255,255,255,0.8)">
+Methoden der Datenanalyse I
+</h1>
+<ul>
+<li>
+Grundlagenvorlesung Statistik
+</li>
+<li>
+240 Bachelor-Studierende
+</li>
+<li>
+9 unterschiedliche Studiengänge
+</li>
+<li>
+1.–8. Fachsemester
+</li>
+<li>
+Zwei Mal wöchentlich (4 SWS)
+</li>
+</ul>
+<aside class="notes">
+<p>Das gilt natürlich auch für Studierende, gerade wenn sie zum ersten mal mit Statistik in Kontakt kommen. <br> <br> <br> Deshalb habe ich mir überlegt, wie kann ich den Studierenden in meiner Vorlesung den Zugang zur Statistik erleichtern und Sie für diesen Themenbereich begeistern.</p>
+<p>Ein paar Eckdaten zu meiner Vorlesung.</p>
+<p>Methoden der Datenanalyse I ist eine Grundlagenvorlesung in Statistik.</p>
+<p>Im letzten Wintersemester mit ca. 240 Bachelorstudierenden aus 9 unterschiedlichen Studiengängen.</p>
+<p>Darunter z. B. Soziologie, Politikwissenschaft, BWL, Kulturwissenschaften und Germanistik</p>
+<p>Und auch bezüglich des Fachsemesters war alles vom 1. bis zum 8. Fachsemester vertreten.</p>
+<p>Also ein sehr diverses Publikum.</p>
+<p>Die Vorlesung findet zwei Mal wöchentlich statt.</p>
+</aside>
+</section>
+</section>
+<section id="lehrkonzept" class="slide level2">
+<h2>Lehrkonzept</h2>
+<ol>
+<li>
+Intuitives Verstehen durch Ausprobieren und Erfahren
+</li>
+<li>
+Aktive Teilnahme der Studierenden während der Vorlesung
+</li>
+<li>
+Erfolgserlebnisse schaffen durch Üben
+</li>
+</ol>
+<br>
+<div class="b">
+<br>
+<ul class="a">
+<li>
+Aufzeichnung der Vorlesung durch Media.UP
+</li>
+</ul>
+</div>
+<aside class="notes">
+<p>Mein Lehrkonzept, um Studierende für Statistik zu begeistern, hat drei zentrale Elemente.</p>
+<ol type="1">
+<li>Intuitives Verstehen durch Ausprobieren und Erfahren</li>
+<li>Aktive Teilnahme der Studierenden während der Vorlesung</li>
+<li>Erfolgserlebnisse schaffen durch Üben</li>
+</ol>
+<p>Außerdem wird die Vorlesung aufgezeichnet, sodass Studierende die Vorlesung beliebig oft anschauen können.</p>
+<p>Zur Umsetzung dieser zentralen Elemente habe ich drei interaktive Web-Anwendungen sogenannte Apps programmiert.</p>
+<p>Die Apps können</p>
+<ul>
+<li>über das Internet</li>
+<li>von jedem Ort aus</li>
+<li>auf jedem Smartphone, Tablet oder PC genutzt werden ohne etwas installieren zu müssen.</li>
+</ul>
+</aside>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<section data-background-image="concept_screenshot.jpg" data-background-color="#ffffff">
+<aside class="notes">
+<p>Das ist die Hauptseite der drei Apps. Das ist eine ganz normale Internetseite.</p>
+<p>Wir gehen gleich in die erste App.</p>
+<p>In der ersten App können die Studierenden direkt während der Vorlesung oder danach <br> <br></p>
+<p>… NEXT durch Ausprobieren verschiedene statistische Konzepte erfahren und verstehen.</p>
+</aside>
+</section>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<section data-autoplay data-background-video="final_concept2.mp4" data-background-color="#ffffff" data-background-size="contain" data-background-position="top">
+<aside class="notes">
+<p>durch Ausprobieren verschiedene statistische Konzepte erfahren und verstehen.</p>
+<p>Hier simulieren wir 200 Münzwürfe einer fairen Münze, und schätzen damit die Wahrscheinlichkeit, dass die Münze Kopf zeigt.</p>
+<p>Fair bedeutet, die Wahrscheinlichkeit ist 0.5.</p>
+<p>Nach 21 Münzwürfen haben wir eine geschätzte Wahrscheinlichkeit von 0.29. Selbst nach ca. 100 Münzwürfen haben wir erst eine geschätzte Wahrscheinlichkeit von 0.4.</p>
+<p>Auf der linken Seite können die Studierenden die echte Wahrscheinlichkeit, dass die Münze Kopf zeigt,<br />
+anpassen, zum Beispiel 0.7 und die Münze wieder 200 Mal werfen. In beiden Fällen sehen wir, dass wenige Münzwürfe nicht ausreichen, um die Wahrscheinlichkeit genau zu schätzen.</p>
+<p><br> Im nächsten Beispiel können Studierende das Ziehen von Stichproben ausprobieren.</p>
+<p>Jeder schwarze Punkt ist eine Person und alle roten Dreiecke sind Personen in der Stichprobe.</p>
+<p>Wir schauen: Wie wirkt sich die Stichprobengröße auf die Schätzung z. B. des durchschnittlichen Einkommens aus.</p>
+<p>Was passiert, wenn nicht 100, sondern 400 oder 1000 Personen befragt werden?</p>
+<p>Wenn wir eine solche Schätzung durchführen, ist das immer mit Unsicherheit verbunden. Wie unsicher ist unsere Schätzung des durchschnittlichen Einkommens?</p>
+<p>Hier ist jeder Punkt das durchschnittliche Einkommen für eine einzelne Stichprobe. Und die vertikalen Linien zeigen die Unsicherheit an.</p>
+<p>Wir können ausprobieren, wie wirkt sich die Stichprobengröße auf die Unsicherheit der Schätzung aus.</p>
+</aside>
+</section>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<section data-background-image="iphone_final.jpg" data-background-color="#ffffff" data-background-size="contain">
+<aside class="notes">
+<p>Über die zweite App bearbeiten die Studierenden während der Vorlesung Übungsaufgaben.</p>
+<p>So sieht die Hauptseite auf einem Handy aus.</p>
+</aside>
+</section>
+</section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<section data-background-video="iphone_final.mp4" data-background-color="#ffffff">
+<aside class="notes">
+<p>Die Seite passt sich perfekt an das Display an. Wir scrollen runter zur zweiten App. Und gehen direkt in die App.</p>
+<p>In der App wählen die Studierenden zuerst den Themenbereich aus und dann die jeweilige Übungsaufgabe.</p>
+<p>Zuerst sehen wir einen Begrüßungstext und dann folgt die eigentliche Übungsaufgabe. In dieser Aufgabe soll eine Wahrscheinlichkeit berechnet werden. Die Studierenden geben dann ihre Antwort ein.</p>
+<p>Die Antworten aller Studierenden werden dann sofort mit meinem Computer synchronisiert und direkt im Anschluss werte ich die Antworten aus und <br> <br></p>
+<p>… NEXT präsentiere die Ergebnisss zum Beispiel in Form einer solchen Grafik.</p>
+</aside>
+</section>
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<section data-background-image="ex_1.png" data-background-color="#ffffff" data-background-size="contain">
+<aside class="notes">
+<p>präsentiere die Ergebnisss zum Beispiel in Form einer solchen Grafik.</p>
+<p>An dem roten Balken sehen wir, dass einige Studierende einen Wert angegeben haben, der kleiner als 0 ist. Wahrscheinlichkeiten können aber gar nicht kleiner als 0 sein.</p>
+<p>Ich kann also für mich direkt in der Vorlesung kontrollieren, ob die Studierenden die Lehrinhalte grundlegend verstanden haben und ich kann ggf. darauf reagieren.</p>
+</aside>
+</section>
+</section>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<section data-background-image="statex_screenshot.jpg" data-background-color="#ffffff" data-background-size="contain">
+<aside class="notes">
+<p>NEXT</p>
+</aside>
+</section>
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<section data-background-video="statex_final.mp4" data-background-color="#ffffff">
+<aside class="notes">
+<p>In der dritten App können die Studierenden zusätzliche Übungsaufgaben zur Klausurvorbereitung bearbeiten.</p>
+<p>Auch hier wählen wir zuerst den Themenbereich aus und dann eine der Aufgaben.</p>
+<p>Für die zufällige Auswahl von weißen und blauen Kugeln aus einer Urne soll hier ein Baumdiagramm gezeichnet werden.</p>
+<p>Jedes Mal, wenn wir auf “Neue Daten” drücken, werden zufällig neue Zahlen für die Aufgabe generiert.</p>
+<p>Außerdem erhalten wir immer eine aktuelle Lösung. Wenn wir neue Zahlen generieren, wird auch die dazugehörige Lösung aktualisiert.</p>
+<p>Schauen wir uns noch eine zweite Aufgabe an.</p>
+<p>Auch hier können wir zufällig neue Zahlen generieren. Bei dieser Aufgabe ändern sich nicht nur die Zahlen, sondern auch der Aufgabentext.</p>
+<p>Und wir bekommen auch hier immer eine aktualisierte Lösung.</p>
+<p>Die Studierenden können alle Aufgaben beliebig oft mit neuen Zahlen bearbeiten. Sie können also solange üben, bis sie es wirklich verstanden.</p>
+Und das ist dann ein riesiges Erfolgserlebnis und motiviert natürlich.
+</aside>
+</section>
+</section>
+<section id="interesse-an-den-apps" class="slide level2">
+<h2>Interesse an den Apps</h2>
+<ul>
+<li>Ideen der Studierenden</li>
+<li>Interesse anderer Universitäten</li>
+</ul>
+<aside class="notes">
+<p>Was mich sehr gefreut hat, war, dass Studierende mit ihren eigenen Ideen zur Weiterentwicklung und Verbesserung der Apps zu mir gekommen sind und ich habe das dann umgesetzt.</p>
+<p>Außerdem habe ich durch Rückmeldungen mitbekommen, dass auch Studierende anderer Universitäten mittlerweile die Apps nutzen.</p>
+Und gerade erst Anfang Oktober habe ich die erste Anfrage einer anderen Uni bekommen, die solche Apps bei sich auch einsetzen möchten.
+</aside>
+</section>
+<section id="section-11" class="slide level2">
+<h2></h2>
+<section data-background-image="lecture_01_pix.png" data-background-color="#ffffff" data-background-size="contain">
+<aside class="notes">
+<p>Und wer so hart arbeitet wie meine Studierenden, verdient natürlich auch eine Belohnung.</p>
+Und deshalb behandeln wir Kombinatorik in der Vorlesung mit 300 Ritter Sport Mini für die Studierenden. Das ist ein Bild aus der Videoaufzeichnung der Vorlesung.
+</aside>
+</section>
+</section>
+<section id="section-12" class="slide level2">
+<h2></h2>
+<section data-background-image="lecture_2_text.png" data-background-color="#ffffff" data-background-size="contain">
+<aside class="notes">
+<p>Und hier ist noch das Beweisfoto, dass es nicht nur 7 Ritter Sport Mini für 240 Studierende gab, sondern genug für alle.</p>
+<p>Wenn Sie jetzt Lust auf Statistik bekommen haben,</p>
+<p>können Sie einfach auf www.datenanalyse.info gehen</p>
+<p>und selbst etwas über Statistik lernen.</p>
+<p>Vielen Dank!</p>
+</aside>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
